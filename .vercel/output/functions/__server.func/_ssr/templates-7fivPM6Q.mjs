@@ -1,0 +1,1932 @@
+//#region node_modules/.nitro/vite/services/ssr/assets/templates-7fivPM6Q.js
+var PRACTICE_AREAS = [
+	{
+		id: "all",
+		label: "All matters"
+	},
+	{
+		id: "civil",
+		label: "Civil"
+	},
+	{
+		id: "criminal",
+		label: "Criminal"
+	},
+	{
+		id: "commercial",
+		label: "Commercial"
+	},
+	{
+		id: "consumer",
+		label: "Consumer"
+	},
+	{
+		id: "ecommerce",
+		label: "E-commerce"
+	},
+	{
+		id: "corporate",
+		label: "Corporate"
+	},
+	{
+		id: "family",
+		label: "Family"
+	},
+	{
+		id: "property",
+		label: "Property"
+	},
+	{
+		id: "public",
+		label: "Public law"
+	}
+];
+var TEMPLATES = [
+	{
+		slug: "legal-notice-demand",
+		title: "Legal notice — demand / recovery",
+		blurb: "Pre-suit demand for a debt or contractual sum, with a clear time to comply.",
+		area: "civil",
+		forum: "Advocate's notice",
+		ragQuery: "legal notice demand recovery contract act 73 74 limitation debt breach of contract written contract",
+		instructions: "Draft a formal advocate's legal notice demanding payment. Use Indian notice style: cause title of parties, numbered recitals of facts, legal grounds (Contract Act ss. 10, 73, 74; limitation), a specific demand with a 15-day deadline, reservation of rights, and dispatch particulars. Do not caption it as a plaint.",
+		fields: [
+			{
+				key: "advocateName",
+				label: "Advocate sending the notice",
+				type: "text",
+				required: true,
+				placeholder: "A. Sharma, Advocate"
+			},
+			{
+				key: "advocateAddress",
+				label: "Chambers address",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "clientName",
+				label: "Client (sender)",
+				type: "text",
+				required: true
+			},
+			{
+				key: "clientAddress",
+				label: "Client address",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "opponentName",
+				label: "Addressee",
+				type: "text",
+				required: true
+			},
+			{
+				key: "opponentAddress",
+				label: "Addressee address",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "city",
+				label: "City / place of notice",
+				type: "text",
+				required: true,
+				placeholder: "New Delhi"
+			},
+			{
+				key: "amount",
+				label: "Principal amount (INR)",
+				type: "text",
+				required: true,
+				placeholder: "8,50,000"
+			},
+			{
+				key: "interest",
+				label: "Interest claimed",
+				type: "text",
+				placeholder: "12% p.a. from 15.01.2026"
+			},
+			{
+				key: "facts",
+				label: "Narrative of the transaction and default",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "documents",
+				label: "Documents in hand",
+				type: "textarea",
+				placeholder: "Invoice dated …, emails, bank advice"
+			},
+			{
+				key: "deadlineDays",
+				label: "Days to comply",
+				type: "text",
+				placeholder: "15"
+			}
+		],
+		sample: {
+			advocateName: "Meera Iyer, Advocate",
+			advocateAddress: "Chambers No. 14, Supreme Court Lawyers' Chambers, Bhagwan Das Road, New Delhi 110001",
+			clientName: "Arka Components Pvt. Ltd.",
+			clientAddress: "Plot 12, Okhla Industrial Area, Phase II, New Delhi 110020",
+			opponentName: "Northwind Traders LLP",
+			opponentAddress: "401, Maker Chambers, Nariman Point, Mumbai 400021",
+			city: "New Delhi",
+			amount: "12,40,000",
+			interest: "18% p.a. from 01.04.2026 till payment",
+			facts: "Pursuant to purchase order NW/2025/118 dated 12.11.2025, the addressee took delivery of precision fasteners against invoice AC/778 dated 20.11.2025 for INR 12,40,000, payable within 45 days. Despite reminders dated 20.01.2026 and 18.03.2026, no payment has been made. A cheque dated 02.06.2026 for the same sum was stopped. The debt is a legally enforceable contractual liability.",
+			documents: "PO, tax invoice, e-way bill, email chain, stop-payment memo",
+			deadlineDays: "15"
+		}
+	},
+	{
+		slug: "legal-notice-cheque",
+		title: "Legal notice — cheque dishonour (NI Act 138)",
+		blurb: "Statutory demand after a cheque is returned unpaid. Timeline is jurisdictional.",
+		area: "commercial",
+		forum: "NI Act § 138 notice",
+		ragQuery: "cheque bounce dishonour negotiable instruments act 138 139 141 142 demand notice 15 days 30 days legally enforceable debt",
+		instructions: "Draft a strict NI Act section 138 statutory notice. Recite presentation, bank return memo (reason and date of information), legally enforceable debt, demand to pay the cheque amount within 15 days of receipt, and the consequence of prosecution under ss. 138/141/142. Do not add unrelated civil claims that could muddy the statutory notice. Compute and state the dates clearly.",
+		fields: [
+			{
+				key: "advocateName",
+				label: "Advocate",
+				type: "text",
+				required: true
+			},
+			{
+				key: "payeeName",
+				label: "Payee / holder",
+				type: "text",
+				required: true
+			},
+			{
+				key: "payeeAddress",
+				label: "Payee address",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "drawerName",
+				label: "Drawer",
+				type: "text",
+				required: true
+			},
+			{
+				key: "drawerAddress",
+				label: "Drawer address (all known addresses)",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "isCompany",
+				label: "Drawer is a company?",
+				type: "select",
+				options: [{
+					value: "no",
+					label: "No — individual / firm"
+				}, {
+					value: "yes",
+					label: "Yes — company / LLP"
+				}]
+			},
+			{
+				key: "directors",
+				label: "Persons in charge (if company)",
+				type: "textarea",
+				hint: "Name those who were in charge of and responsible for the business — s. 141."
+			},
+			{
+				key: "chequeNo",
+				label: "Cheque number",
+				type: "text",
+				required: true
+			},
+			{
+				key: "chequeDate",
+				label: "Cheque date",
+				type: "date",
+				required: true
+			},
+			{
+				key: "chequeAmount",
+				label: "Cheque amount (INR)",
+				type: "text",
+				required: true
+			},
+			{
+				key: "bankDrawn",
+				label: "Drawee bank & branch",
+				type: "text",
+				required: true
+			},
+			{
+				key: "presentedOn",
+				label: "Date of presentation",
+				type: "date",
+				required: true
+			},
+			{
+				key: "returnDate",
+				label: "Date of bank return information",
+				type: "date",
+				required: true
+			},
+			{
+				key: "returnReason",
+				label: "Return reason",
+				type: "text",
+				required: true,
+				placeholder: "Funds insufficient"
+			},
+			{
+				key: "liability",
+				label: "Underlying debt or liability",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "city",
+				label: "Place of notice",
+				type: "text",
+				required: true
+			}
+		],
+		sample: {
+			advocateName: "Raghav Menon, Advocate",
+			payeeName: "Sana Qureshi",
+			payeeAddress: "22, Lavelle Road, Bengaluru 560001",
+			drawerName: "Vikram Rao",
+			drawerAddress: "Flat 8B, Prestige Ferns, Koramangala, Bengaluru 560034",
+			isCompany: "no",
+			directors: "",
+			chequeNo: "000891",
+			chequeDate: "2026-07-10",
+			chequeAmount: "4,75,000",
+			bankDrawn: "HDFC Bank, Koramangala branch",
+			presentedOn: "2026-07-14",
+			returnDate: "2026-07-16",
+			returnReason: "Funds insufficient",
+			liability: "Balance sale consideration for a used Toyota Innova transferred on 28.06.2026 under a written sale agreement. The cheque was issued towards that legally enforceable debt.",
+			city: "Bengaluru"
+		}
+	},
+	{
+		slug: "reply-legal-notice",
+		title: "Reply to legal notice",
+		blurb: "Point-wise reply that meets allegations without making fresh admissions.",
+		area: "civil",
+		forum: "Advocate's reply",
+		ragQuery: "legal notice reply without prejudice contract limitation denial burden of proof",
+		instructions: "Draft a point-wise reply. Open with a without-prejudice reservation. Deny each unsustainable allegation specifically. Admit only what is true and harmless. Raise limitation, jurisdiction, and want of cause of action if available. Do not volunteer new damaging facts. Close by calling upon the sender to withdraw and by reserving rights.",
+		fields: [
+			{
+				key: "advocateName",
+				label: "Advocate for the client",
+				type: "text",
+				required: true
+			},
+			{
+				key: "clientName",
+				label: "Client (replying party)",
+				type: "text",
+				required: true
+			},
+			{
+				key: "clientAddress",
+				label: "Client address",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "senderName",
+				label: "Notice sender",
+				type: "text",
+				required: true
+			},
+			{
+				key: "noticeDate",
+				label: "Date of incoming notice",
+				type: "date",
+				required: true
+			},
+			{
+				key: "noticeSummary",
+				label: "What the notice demands",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "trueFacts",
+				label: "Client's version of facts",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "defences",
+				label: "Defences to raise",
+				type: "textarea",
+				placeholder: "Limitation, no debt, quality dispute, payment already made…"
+			},
+			{
+				key: "city",
+				label: "Place",
+				type: "text",
+				required: true
+			}
+		],
+		sample: {
+			advocateName: "Kabir Seth, Advocate",
+			clientName: "Northwind Traders LLP",
+			clientAddress: "401, Maker Chambers, Nariman Point, Mumbai 400021",
+			senderName: "Arka Components Pvt. Ltd.",
+			noticeDate: "2026-08-12",
+			noticeSummary: "Demand of INR 12,40,000 with 18% interest alleging unpaid invoice AC/778 and a stopped cheque.",
+			trueFacts: "Goods under invoice AC/778 were short-supplied and a substantial lot failed dimensional inspection, which was intimated on 04.12.2025. A debit note of INR 6,10,000 was raised. The cheque was issued as security and was stopped after the supplier refused to collect rejected goods. A sum of INR 6,30,000 was RTGS'd on 22.01.2026.",
+			defences: "Part payment, failure of consideration, goods rejected, cheque as security not towards a legally enforceable debt of the full invoice, inflated interest.",
+			city: "Mumbai"
+		}
+	},
+	{
+		slug: "consumer-complaint",
+		title: "Consumer complaint (CPA 2019)",
+		blurb: "District / State Commission complaint for deficiency of service or defective goods.",
+		area: "consumer",
+		forum: "Consumer Commission",
+		ragQuery: "consumer protection act 2019 complaint deficiency unfair trade refund compensation consideration pecuniary jurisdiction",
+		instructions: "Draft a consumer complaint under the Consumer Protection Act, 2019. Caption the correct Commission using consideration paid. Plead how the complainant is a consumer (not commercial resale). Narrate deficiency / unfair practice, cause of action, limitation (2 years), territorial jurisdiction (including residence), and a structured prayer (refund, replacement, compensation, litigation cost). Numbered paragraphs.",
+		fields: [
+			{
+				key: "complainant",
+				label: "Complainant",
+				type: "text",
+				required: true
+			},
+			{
+				key: "complainantAddress",
+				label: "Complainant address",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "opposite",
+				label: "Opposite party",
+				type: "text",
+				required: true
+			},
+			{
+				key: "oppositeAddress",
+				label: "Opposite party address",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "consideration",
+				label: "Consideration paid (INR)",
+				type: "text",
+				required: true
+			},
+			{
+				key: "forum",
+				label: "Forum",
+				type: "select",
+				options: [
+					{
+						value: "district",
+						label: "District Commission"
+					},
+					{
+						value: "state",
+						label: "State Commission"
+					},
+					{
+						value: "national",
+						label: "National Commission"
+					}
+				]
+			},
+			{
+				key: "productOrService",
+				label: "Goods / service",
+				type: "text",
+				required: true
+			},
+			{
+				key: "facts",
+				label: "Facts of deficiency or unfair practice",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "loss",
+				label: "Loss, injury and amounts claimed",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "city",
+				label: "Place of filing",
+				type: "text",
+				required: true
+			}
+		],
+		sample: {
+			complainant: "Ananya Bhatt",
+			complainantAddress: "14, Shanti Niketan, New Delhi 110021",
+			opposite: "Summit Homes Pvt. Ltd.",
+			oppositeAddress: "Summit Tower, Sector 62, Noida 201309",
+			consideration: "48,00,000",
+			forum: "state",
+			productOrService: "Residential flat in 'Summit Park', Greater Noida — builder-buyer agreement dated 18.02.2022",
+			facts: "The complainant paid INR 48,00,000 towards a 3 BHK booked in 2022 with a promised possession of December 2024. Possession has not been offered. RERA registration lapsed. The opposite party now demands extra charges for car park and GST already inbuilt. Emails of 11.01.2026 and 04.05.2026 went unanswered.",
+			loss: "Refund of INR 48,00,000 with 12% interest, compensation of INR 3,00,000 for mental agony and rental loss, and INR 50,000 as costs.",
+			city: "New Delhi"
+		}
+	},
+	{
+		slug: "rti-application",
+		title: "RTI application",
+		blurb: "Section 6 request to a public information officer, with a precise list of records.",
+		area: "public",
+		forum: "RTI Act § 6",
+		ragQuery: "right to information act section 6 7 8 CPIO 30 days fee exemption",
+		instructions: "Draft an RTI application under section 6. No reasons for seeking information. Numbered, specific items (file numbers if known, period, office). Ask for inspection or certified copies. State BPL if applicable. Mention 30-day / 48-hour timelines. Do not argue the case; ask for records.",
+		fields: [
+			{
+				key: "applicant",
+				label: "Applicant",
+				type: "text",
+				required: true
+			},
+			{
+				key: "applicantAddress",
+				label: "Address & contact",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "publicAuthority",
+				label: "Public authority",
+				type: "text",
+				required: true
+			},
+			{
+				key: "pio",
+				label: "CPIO / SPIO (if known)",
+				type: "text"
+			},
+			{
+				key: "subject",
+				label: "Subject-matter",
+				type: "text",
+				required: true
+			},
+			{
+				key: "items",
+				label: "Information sought (list)",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "period",
+				label: "Period of records",
+				type: "text",
+				placeholder: "01.04.2024 to 31.03.2026"
+			},
+			{
+				key: "bpl",
+				label: "BPL applicant?",
+				type: "select",
+				options: [{
+					value: "no",
+					label: "No — fee enclosed / to be paid"
+				}, {
+					value: "yes",
+					label: "Yes — fee exempt"
+				}]
+			}
+		],
+		sample: {
+			applicant: "Harish Patel",
+			applicantAddress: "C-19, Vasna, Ahmedabad 380007 · 98XXXXXX21 · harish.p@email.com",
+			publicAuthority: "Municipal Corporation of Ahmedabad, Town Planning Department",
+			pio: "Public Information Officer, Town Planning, AMC",
+			subject: "Building-use permission and occupancy for Survey No. 42, Vasna",
+			items: "1. Certified copy of the building-use / occupancy certificate, if issued.\n2. File notings on application no. TP/2024/8891.\n3. Inspection reports from 01.01.2024 onwards.\n4. Names and designations of officers who approved the last plan revision.\n5. Whether any unauthorised-construction notice was issued, with copies.",
+			period: "01.01.2024 to present",
+			bpl: "no"
+		}
+	},
+	{
+		slug: "affidavit",
+		title: "General affidavit",
+		blurb: "Sworn declaration of facts for a court, authority, or notarial record.",
+		area: "civil",
+		forum: "Notary / Oaths Commissioner",
+		ragQuery: "affidavit order xix oaths act verification deponent notary",
+		instructions: "Draft a first-person affidavit. Opening: name, parentage, age, occupation, address, competent to depose. Numbered paragraphs of facts. Distinguish knowledge from information and belief. Closing verification, place, date, and a notarial jurat block. No legal argument.",
+		fields: [
+			{
+				key: "deponent",
+				label: "Deponent",
+				type: "text",
+				required: true
+			},
+			{
+				key: "parentage",
+				label: "Son/daughter/wife of",
+				type: "text",
+				required: true
+			},
+			{
+				key: "age",
+				label: "Age",
+				type: "text",
+				required: true
+			},
+			{
+				key: "occupation",
+				label: "Occupation",
+				type: "text"
+			},
+			{
+				key: "address",
+				label: "Residential address",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "purpose",
+				label: "Purpose of the affidavit",
+				type: "text",
+				required: true
+			},
+			{
+				key: "facts",
+				label: "Facts to be sworn",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "place",
+				label: "Place of swearing",
+				type: "text",
+				required: true
+			}
+		],
+		sample: {
+			deponent: "Rohit Kulkarni",
+			parentage: "son of late Suresh Kulkarni",
+			age: "41",
+			occupation: "Chartered accountant",
+			address: "6, Prabhat Road, Pune 411004",
+			purpose: "Change of appearance of surname in passport records following a registered deed poll",
+			facts: "I was born on 12.03.1985 at Pune and my birth was registered in the name Rohit Suresh Kulkarni. By a registered deed poll dated 04.02.2026 I assumed the surname Kulkarni-Deshpande for all purposes. I have not been involved in any criminal case. This affidavit is in support of my application to the Regional Passport Office, Pune.",
+			place: "Pune"
+		}
+	},
+	{
+		slug: "power-of-attorney",
+		title: "Power of attorney",
+		blurb: "Special or general authority to act, with stamp and authentication in mind.",
+		area: "property",
+		forum: "Notarial / registrable instrument",
+		ragQuery: "power of attorney authentication registration stamp immovable property donor donee",
+		instructions: "Draft an Indian power of attorney. Recite donor and donee with KYC particulars. State whether special or general. Enumerate powers in numbered clauses. For immovable property, flag registration and State stamp. Include revocation, duration, and that the attorney shall act in the donor's name. Authentication clause for notary / consulate. Do not copy the State Emblem.",
+		fields: [
+			{
+				key: "donor",
+				label: "Donor (principal)",
+				type: "text",
+				required: true
+			},
+			{
+				key: "donorAddress",
+				label: "Donor address",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "donee",
+				label: "Donee (attorney)",
+				type: "text",
+				required: true
+			},
+			{
+				key: "doneeAddress",
+				label: "Donee address",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "kind",
+				label: "Kind",
+				type: "select",
+				options: [{
+					value: "special",
+					label: "Special (limited acts)"
+				}, {
+					value: "general",
+					label: "General"
+				}]
+			},
+			{
+				key: "property",
+				label: "Property or subject-matter",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "powers",
+				label: "Powers to confer",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "duration",
+				label: "Duration / revocation",
+				type: "text",
+				placeholder: "Until revoked in writing; surviving the donor? No."
+			},
+			{
+				key: "place",
+				label: "Place of execution",
+				type: "text",
+				required: true
+			}
+		],
+		sample: {
+			donor: "Nalini Krishnan",
+			donorAddress: "Currently at 88 Holland Road, Singapore 278535 (NRI; Indian passport Z0000000)",
+			donee: "Arjun Krishnan",
+			doneeAddress: "12, Boat Club Road, Chennai 600028",
+			kind: "special",
+			property: "Apartment No. 4C, 'Harbour View', Santhome, Chennai, comprised in old S.No. 12/2, together with one covered car park.",
+			powers: "To apply for and collect a certified copy of the parent deed; to appear before the Sub-Registrar; to execute a deed of sale in favour of a purchaser at a price not below INR 1.85 crore; to receive consideration by banker's cheque in my account; to hand over keys and sign possession letters; to pay tax and society dues; not to mortgage or gift.",
+			duration: "Valid for 18 months or until written revocation, whichever is earlier. Not coupled with interest.",
+			place: "Singapore (to be authenticated at the Indian Mission / notary and stamped in Tamil Nadu)"
+		}
+	},
+	{
+		slug: "rent-agreement",
+		title: "Residential lease / rent agreement",
+		blurb: "Leave-and-licence or lease of a dwelling, with TPA, stamp and lock-in.",
+		area: "property",
+		forum: "Instrument",
+		ragQuery: "lease rent agreement transfer of property 105 107 108 stamp registration 11 months lock-in deposit",
+		instructions: "Draft a residential leave-and-licence / lease for Indian use. Identify licensor/landlord and licensee/tenant, premises, term (often 11 months), rent, deposit, lock-in, maintenance, fittings inventory, termination, police verification if customary in that city, and stamp. Do not pretend an 11-month deed creates a yearly lease. Quiet enjoyment and repair covenants from TPA s. 108 as defaults, varied by contract.",
+		fields: [
+			{
+				key: "landlord",
+				label: "Landlord / licensor",
+				type: "text",
+				required: true
+			},
+			{
+				key: "landlordAddress",
+				label: "Landlord address",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "tenant",
+				label: "Tenant / licensee",
+				type: "text",
+				required: true
+			},
+			{
+				key: "tenantAddress",
+				label: "Tenant permanent address",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "premises",
+				label: "Premises (full description)",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "city",
+				label: "City",
+				type: "text",
+				required: true
+			},
+			{
+				key: "term",
+				label: "Term",
+				type: "text",
+				required: true,
+				placeholder: "11 months from 01.09.2026"
+			},
+			{
+				key: "rent",
+				label: "Monthly rent (INR)",
+				type: "text",
+				required: true
+			},
+			{
+				key: "deposit",
+				label: "Security deposit (INR)",
+				type: "text",
+				required: true
+			},
+			{
+				key: "lockIn",
+				label: "Lock-in / notice",
+				type: "text"
+			},
+			{
+				key: "fittings",
+				label: "Fittings & extras",
+				type: "textarea"
+			}
+		],
+		sample: {
+			landlord: "Pradeep Malhotra",
+			landlordAddress: "House 9, Westend, New Delhi 110021",
+			tenant: "Kavya Nair",
+			tenantAddress: "c/o Nair, Panampilly Nagar, Kochi 682036",
+			premises: "Ground-floor two-bedroom dwelling at D-42, Defence Colony, New Delhi 110024, with one open parking bay, as per attached inventory.",
+			city: "New Delhi",
+			term: "11 months commencing 01.09.2026",
+			rent: "55,000",
+			deposit: "1,10,000",
+			lockIn: "3 months lock-in; thereafter 30 days' written notice by either party",
+			fittings: "Modular kitchen, 1.5-ton AC in each bedroom, geyser, geyser-backed RO, white goods listed in Annexure A."
+		}
+	},
+	{
+		slug: "employment-agreement",
+		title: "Employment agreement",
+		blurb: "Indian employment contract — duties, pay, confidentiality, not a void non-compete.",
+		area: "corporate",
+		forum: "Instrument",
+		ragQuery: "employment agreement contract act 27 restraint of trade confidentiality POSH IDA workman notice period",
+		instructions: "Draft an Indian employment agreement. Include designation, reporting, compensation (CTC break-up at a high level), probation, notice, IP assignment, confidentiality, POSH acknowledgement, data protection, and governing law. Do not include a post-termination non-compete of the English kind — Contract Act s. 27 makes it void. A narrow non-solicit and confidentiality covenant is acceptable. Flag if the person may be a 'workman'.",
+		fields: [
+			{
+				key: "employer",
+				label: "Employer",
+				type: "text",
+				required: true
+			},
+			{
+				key: "employerAddress",
+				label: "Employer registered office",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "employee",
+				label: "Employee",
+				type: "text",
+				required: true
+			},
+			{
+				key: "designation",
+				label: "Designation",
+				type: "text",
+				required: true
+			},
+			{
+				key: "placeOfWork",
+				label: "Place of work",
+				type: "text",
+				required: true
+			},
+			{
+				key: "ctc",
+				label: "Annual CTC (INR)",
+				type: "text",
+				required: true
+			},
+			{
+				key: "probation",
+				label: "Probation",
+				type: "text",
+				placeholder: "6 months"
+			},
+			{
+				key: "notice",
+				label: "Notice period",
+				type: "text",
+				placeholder: "60 days after confirmation"
+			},
+			{
+				key: "duties",
+				label: "Role / duties (short)",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "special",
+				label: "Special terms",
+				type: "textarea"
+			}
+		],
+		sample: {
+			employer: "Lumen Analytics Pvt. Ltd.",
+			employerAddress: "3rd Floor, WeWork Galaxy, Residency Road, Bengaluru 560025",
+			employee: "Aditya Sen",
+			designation: "Senior Product Designer",
+			placeOfWork: "Bengaluru, with hybrid attendance as per policy",
+			ctc: "28,00,000",
+			probation: "6 months",
+			notice: "30 days in probation; 60 days thereafter",
+			duties: "Own the design system for the B2B analytics suite, mentor two designers, and work with the product trio on discovery.",
+			special: "Garden leave up to 30 days at the company's option. Invention assignment of work product. No post-employment non-compete."
+		}
+	},
+	{
+		slug: "nda",
+		title: "Non-disclosure agreement",
+		blurb: "Mutual or one-way confidentiality that survives, without a void trade restraint.",
+		area: "corporate",
+		forum: "Instrument",
+		ragQuery: "nda confidentiality trade secret contract act 27 73 personal data DPDP",
+		instructions: "Draft an Indian NDA. Define confidential information, exclusions (public domain, independently developed, compelled disclosure), purpose, term, return/destruction, no licence of IP, no non-compete, DPDP-aware personal-data clause, injunction as a remedy alongside damages. Mutual or one-way as indicated. Stamping reminder.",
+		fields: [
+			{
+				key: "partyA",
+				label: "Disclosing party",
+				type: "text",
+				required: true
+			},
+			{
+				key: "partyAAddress",
+				label: "Address",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "partyB",
+				label: "Receiving party",
+				type: "text",
+				required: true
+			},
+			{
+				key: "partyBAddress",
+				label: "Address",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "mutual",
+				label: "Form",
+				type: "select",
+				options: [{
+					value: "one-way",
+					label: "One-way"
+				}, {
+					value: "mutual",
+					label: "Mutual"
+				}]
+			},
+			{
+				key: "purpose",
+				label: "Purpose of disclosure",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "term",
+				label: "Confidentiality term",
+				type: "text",
+				required: true,
+				placeholder: "3 years from disclosure"
+			},
+			{
+				key: "law",
+				label: "Governing law & forum",
+				type: "text",
+				placeholder: "Laws of India; courts at Bengaluru"
+			}
+		],
+		sample: {
+			partyA: "Lumen Analytics Pvt. Ltd.",
+			partyAAddress: "Bengaluru",
+			partyB: "Harborline Ventures LLP",
+			partyBAddress: "Mumbai",
+			mutual: "mutual",
+			purpose: "Evaluation of a possible distribution partnership for the Lumen analytics suite in western India.",
+			term: "Three years from each disclosure; trade secrets until they cease to be secret",
+			law: "Laws of India; exclusive jurisdiction of courts at Bengaluru"
+		}
+	},
+	{
+		slug: "police-complaint",
+		title: "Police complaint / application for FIR",
+		blurb: "Written information of a cognizable offence under BNSS 173, with ingredients.",
+		area: "criminal",
+		forum: "Officer in charge of a police station",
+		ragQuery: "FIR BNSS 173 cognizable cheating 318 criminal breach of trust 316 intimidation 351 e-FIR zero FIR",
+		instructions: "Draft a police complaint seeking registration of FIR under BNSS s. 173. Write in the first person. Date, time, place, named or unknown accused, ingredients of the BNS sections invoked, list of evidence (including electronic, with a note on BSA certificate), and a prayer to register and investigate. Do not inflate sections. If territoriality is uncertain, ask for Zero FIR. Close with an undertaking of truth.",
+		fields: [
+			{
+				key: "complainant",
+				label: "Complainant",
+				type: "text",
+				required: true
+			},
+			{
+				key: "complainantAddress",
+				label: "Address & phone",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "station",
+				label: "Police station",
+				type: "text",
+				required: true
+			},
+			{
+				key: "accused",
+				label: "Accused (if known)",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "offenceDate",
+				label: "Date & time of incident",
+				type: "text",
+				required: true
+			},
+			{
+				key: "place",
+				label: "Place of incident",
+				type: "text",
+				required: true
+			},
+			{
+				key: "sections",
+				label: "Sections suggested",
+				type: "text",
+				placeholder: "BNS 318, 316, 351"
+			},
+			{
+				key: "facts",
+				label: "Narrative",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "evidence",
+				label: "Evidence / witnesses",
+				type: "textarea"
+			}
+		],
+		sample: {
+			complainant: "Neelam Joshi",
+			complainantAddress: "B-12, Indirapuram, Ghaziabad 201014 · 98XXXXXX44",
+			station: "Indirapuram Police Station, Commissionerate Ghaziabad",
+			accused: "Rakesh 'Sunny' Bansal, resident of Vasundhara, Ghaziabad, operator of 'Sunny Capital' on Telegram",
+			offenceDate: "Between 03.03.2026 and 21.08.2026; last transfer on 21.08.2026 at about 16:40 hrs",
+			place: "Indirapuram (online transfers from complainant's HDFC account) and Vasundhara",
+			sections: "BNS §§ 318, 316, 351; IT Act §§ 66C, 66D",
+			facts: "The accused represented that he ran a SEBI-registered PMS and induced me to transfer INR 9,80,000 in five tranches for a 'guaranteed 18% desk'. No SEBI registration exists. From August he has threatened to circulate morphed photographs unless a further INR 2 lakh is paid. I seek registration of an FIR and investigation.",
+			evidence: "Bank statements, UTR list, Telegram exports (to be certified under BSA), screenshots, two witnesses who attended a seminar on 16.03.2026."
+		}
+	},
+	{
+		slug: "bail-application",
+		title: "Bail application",
+		blurb: "Regular or anticipatory bail under BNSS 480 / 482 / 483.",
+		area: "criminal",
+		forum: "Sessions / High Court / Magistrate",
+		ragQuery: "bail BNSS 480 482 483 anticipatory custody antecedents tampering triple test",
+		instructions: "Draft a bail application in Indian criminal form. Cause title, custody particulars, sections, a brief of the prosecution case, grounds (no flight risk, no tampering, roots in community, medical if any, parity, delay), and a prayer with conditions the applicant is willing to accept. Distinguish anticipatory (BNSS 482) from regular (480/483). Do not overstate facts.",
+		fields: [
+			{
+				key: "kind",
+				label: "Kind of bail",
+				type: "select",
+				options: [{
+					value: "regular",
+					label: "Regular bail (already arrested)"
+				}, {
+					value: "anticipatory",
+					label: "Anticipatory bail"
+				}]
+			},
+			{
+				key: "court",
+				label: "Court",
+				type: "text",
+				required: true,
+				placeholder: "Court of Session, Bengaluru Urban"
+			},
+			{
+				key: "applicant",
+				label: "Applicant / accused",
+				type: "text",
+				required: true
+			},
+			{
+				key: "age",
+				label: "Age / occupation",
+				type: "text"
+			},
+			{
+				key: "sections",
+				label: "Offences alleged",
+				type: "text",
+				required: true
+			},
+			{
+				key: "fir",
+				label: "FIR / crime number & station",
+				type: "text",
+				required: true
+			},
+			{
+				key: "custody",
+				label: "Custody / apprehension facts",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "caseBrief",
+				label: "Prosecution story (neutral)",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "grounds",
+				label: "Grounds for bail",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "antecedents",
+				label: "Antecedents",
+				type: "text",
+				placeholder: "No prior conviction"
+			}
+		],
+		sample: {
+			kind: "regular",
+			court: "Court of Session, Bengaluru Urban",
+			applicant: "Vikram Rao",
+			age: "38 years, proprietor",
+			sections: "NI Act is not this case — BNS § 318(4) and § 351",
+			fir: "Crime No. 214/2026 of Koramangala P.S.",
+			custody: "Arrested on 28.08.2026; in judicial custody since 29.08.2026; police custody not sought further.",
+			caseBrief: "The complainant alleges that the applicant induced investment of INR 18 lakh in a partnership that was never registered and thereafter threatened him. The applicant's case is that the sum was a loan already partly repaid.",
+			grounds: "The dispute is essentially civil; documents of repayment exist; the applicant has a passport already deposited with the IO; aged parents; no likelihood of tampering as the complainant is already examined under BNSS; willing to not leave Karnataka.",
+			antecedents: "No prior conviction; one pending 138 NI Act complaint of 2024 in which he is on bail"
+		}
+	},
+	{
+		slug: "plaint-money-suit",
+		title: "Plaint — money recovery",
+		blurb: "Civil suit for a debt or liquidated demand, with jurisdiction and limitation pleaded.",
+		area: "civil",
+		forum: "Civil Court",
+		ragQuery: "plaint order vii CPC 20 jurisdiction limitation contract 73 money recovery valuation court fee",
+		instructions: "Draft a plaint for recovery of money. Follow Order VII: parties with addresses, jurisdictional facts (territorial and pecuniary), chronological numbered facts, cause of action paragraph with date, limitation paragraph, valuation and court-fee, and a prayer for decree, interest pendente lite and future, and costs. Verification. Do not include evidence argument.",
+		fields: [
+			{
+				key: "court",
+				label: "Court",
+				type: "text",
+				required: true
+			},
+			{
+				key: "plaintiff",
+				label: "Plaintiff",
+				type: "text",
+				required: true
+			},
+			{
+				key: "plaintiffAddress",
+				label: "Plaintiff address",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "defendant",
+				label: "Defendant",
+				type: "text",
+				required: true
+			},
+			{
+				key: "defendantAddress",
+				label: "Defendant address",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "amount",
+				label: "Principal (INR)",
+				type: "text",
+				required: true
+			},
+			{
+				key: "interest",
+				label: "Interest claimed",
+				type: "text"
+			},
+			{
+				key: "facts",
+				label: "Facts",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "causeDate",
+				label: "When cause of action arose",
+				type: "text",
+				required: true
+			},
+			{
+				key: "valuation",
+				label: "Valuation / court-fee note",
+				type: "text"
+			}
+		],
+		sample: {
+			court: "Hon'ble District Judge, South-East, Saket, New Delhi",
+			plaintiff: "Arka Components Pvt. Ltd., through its authorised director",
+			plaintiffAddress: "Plot 12, Okhla Industrial Area, Phase II, New Delhi 110020",
+			defendant: "Northwind Traders LLP, through its designated partner",
+			defendantAddress: "401, Maker Chambers, Nariman Point, Mumbai 400021",
+			amount: "12,40,000",
+			interest: "18% p.a. from 04.01.2026",
+			facts: "Goods supplied under PO NW/2025/118 and invoice AC/778. Part of the price remains unpaid. A cheque was stopped. Legal notice dated 12.08.2026 went unanswered. The defendant carries on business and the order was placed with, and goods were dispatched from, the plaintiff's Okhla office.",
+			causeDate: "04.01.2026 when the invoice fell due, continuing on stop-payment and on failure to comply with the notice",
+			valuation: "For jurisdiction and court-fee: INR 12,40,000 plus interest; court-fee as per the Court-fees Act as applicable to Delhi"
+		}
+	},
+	{
+		slug: "written-statement",
+		title: "Written statement",
+		blurb: "Defence to a civil suit — preliminary objections and specific denials.",
+		area: "civil",
+		forum: "Civil Court",
+		ragQuery: "written statement order viii specific denial res judicata limitation jurisdiction set-off",
+		instructions: "Draft a written statement. Lead with preliminary objections (jurisdiction, limitation, cause of action, misjoinder, Order VII r. 11). Then paragraph-wise reply matching the plaint numbering, with specific denials. Plead additional facts. Prayer to dismiss. Verification. Do not be evasive.",
+		fields: [
+			{
+				key: "court",
+				label: "Court",
+				type: "text",
+				required: true
+			},
+			{
+				key: "suit",
+				label: "Suit number & parties",
+				type: "text",
+				required: true
+			},
+			{
+				key: "defendant",
+				label: "Defendant",
+				type: "text",
+				required: true
+			},
+			{
+				key: "plaintSummary",
+				label: "What the plaint claims",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "objections",
+				label: "Preliminary objections",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "defenceFacts",
+				label: "Defendant's facts",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "paraCount",
+				label: "Number of plaint paragraphs (approx.)",
+				type: "text",
+				placeholder: "18"
+			}
+		],
+		sample: {
+			court: "District Judge, South-East, Saket, New Delhi",
+			suit: "CS (Comm) 441 of 2026 — Arka Components Pvt. Ltd. v. Northwind Traders LLP",
+			defendant: "Northwind Traders LLP",
+			plaintSummary: "Recovery of INR 12,40,000 with interest on an invoice for fasteners.",
+			objections: "This Court lacks territorial jurisdiction for a Mumbai defendant when no part of the cause of action arose in South-East Delhi beyond a self-serving dispatch plea. The claim is inflated. The plaintiff has suppressed the debit note and inspection report.",
+			defenceFacts: "Goods failed inspection. Debit note of INR 6,10,000. INR 6,30,000 already paid. Cheque was security. Interest at 18% was never agreed.",
+			paraCount: "16"
+		}
+	},
+	{
+		slug: "notice-80-cpc",
+		title: "Notice under section 80 CPC",
+		blurb: "Mandatory two-month notice before a suit against Government or a public officer.",
+		area: "public",
+		forum: "CPC § 80 notice",
+		ragQuery: "CPC section 80 notice government public officer two months cause of action relief",
+		instructions: "Draft a section 80 CPC notice. It must state the name, description and place of residence of the intended plaintiff, the cause of action, and the reliefs that will be claimed. Address the appropriate Government / public officer. Give two months. Mark copies. Do not waive formality.",
+		fields: [
+			{
+				key: "plaintiff",
+				label: "Intended plaintiff",
+				type: "text",
+				required: true
+			},
+			{
+				key: "plaintiffAddress",
+				label: "Residence / description",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "addressee",
+				label: "Government / public officer",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "cause",
+				label: "Cause of action",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "reliefs",
+				label: "Reliefs that will be claimed",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "place",
+				label: "Place",
+				type: "text",
+				required: true
+			}
+		],
+		sample: {
+			plaintiff: "Kiran Devi",
+			plaintiffAddress: "Widow of late Om Prakash, resident of Village Fatehpur, Tehsil Hapur, Uttar Pradesh",
+			addressee: "The Secretary, Ministry of Road Transport and Highways, Government of India, Transport Bhawan, New Delhi; and the Project Director, NHAI, PIU Hapur",
+			cause: "Acquisition and taking of possession of 0.18 hectare of land in Khasra 882 for NH widening without disbursement of the compensation awarded on 11.11.2025. Representations dated 02.02.2026 and 19.05.2026 are unanswered. Article 300A is engaged.",
+			reliefs: "Decree for the awarded compensation with interest as per the statute, damages for deprivation of possession, and costs. In the alternative, restoration.",
+			place: "Hapur"
+		}
+	},
+	{
+		slug: "mutual-consent-divorce",
+		title: "Mutual-consent divorce petition (HMA 13B)",
+		blurb: "Joint petition under the Hindu Marriage Act, with settlement on alimony and custody.",
+		area: "family",
+		forum: "Family Court",
+		ragQuery: "hindu marriage act 13B mutual consent divorce living separately one year alimony custody",
+		instructions: "Draft a joint petition under HMA s. 13B. Plead the marriage (date, rites, place), status as Hindus, separate living for a year or more, inability to live together, mutual agreement to dissolve, and terms on alimony, stridhan, custody and visitation if children. Prayer for a decree of divorce. Dignity of both parties; no scandalous surplus. Note that the cooling period may be waived in an appropriate case.",
+		fields: [
+			{
+				key: "court",
+				label: "Family Court",
+				type: "text",
+				required: true
+			},
+			{
+				key: "husband",
+				label: "Husband",
+				type: "text",
+				required: true
+			},
+			{
+				key: "husbandAddress",
+				label: "Husband address",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "wife",
+				label: "Wife",
+				type: "text",
+				required: true
+			},
+			{
+				key: "wifeAddress",
+				label: "Wife address",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "marriage",
+				label: "Date, place and rites of marriage",
+				type: "text",
+				required: true
+			},
+			{
+				key: "separatedSince",
+				label: "Living separately since",
+				type: "text",
+				required: true
+			},
+			{
+				key: "children",
+				label: "Children",
+				type: "textarea"
+			},
+			{
+				key: "terms",
+				label: "Settlement terms",
+				type: "textarea",
+				required: true
+			}
+		],
+		sample: {
+			court: "Principal Judge, Family Court, Pune",
+			husband: "Rohit Kulkarni",
+			husbandAddress: "6, Prabhat Road, Pune 411004",
+			wife: "Aditi Kulkarni",
+			wifeAddress: "c/o Deshpande, Kothrud, Pune 411038",
+			marriage: "12.12.2019 at Pune, according to Hindu Vedic rites; marriage registered on 18.12.2019",
+			separatedSince: "01.06.2025",
+			children: "None",
+			terms: "No claim to alimony on either side. Each retains personal effects and stridhan already returned as per list dated 01.08.2026. Joint savings of INR 3.2 lakh in HDFC to be divided equally. Neither will defame the other."
+		}
+	},
+	{
+		slug: "simple-will",
+		title: "Will (Indian Succession Act)",
+		blurb: "Testamentary disposition with two attesting witnesses and a revocation clause.",
+		area: "family",
+		forum: "Testament",
+		ragQuery: "will indian succession act 59 63 attestation executor probate hindu",
+		instructions: "Draft a will for a Hindu testator of sound mind. Opening declaration, revocation of prior wills, appointment of executor, specific bequests, residuary clause, guardianship if minors, and a testimonium. Leave space for two witnesses who saw the testator sign. Optional registration note. Clear language; no conditions that are void for uncertainty.",
+		fields: [
+			{
+				key: "testator",
+				label: "Testator",
+				type: "text",
+				required: true
+			},
+			{
+				key: "parentage",
+				label: "Son/daughter of",
+				type: "text",
+				required: true
+			},
+			{
+				key: "age",
+				label: "Age",
+				type: "text",
+				required: true
+			},
+			{
+				key: "address",
+				label: "Address",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "religion",
+				label: "Religion / personal law",
+				type: "text",
+				placeholder: "Hindu"
+			},
+			{
+				key: "executor",
+				label: "Executor",
+				type: "text",
+				required: true
+			},
+			{
+				key: "bequests",
+				label: "Bequests (list property and beneficiaries)",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "residue",
+				label: "Residuary beneficiary",
+				type: "text",
+				required: true
+			},
+			{
+				key: "place",
+				label: "Place of execution",
+				type: "text",
+				required: true
+			}
+		],
+		sample: {
+			testator: "Suresh Kulkarni",
+			parentage: "son of late Govind Kulkarni",
+			age: "72",
+			address: "6, Prabhat Road, Pune 411004",
+			religion: "Hindu",
+			executor: "Rohit Kulkarni, son of the testator",
+			bequests: "Self-acquired bungalow at 6, Prabhat Road, Pune, to my wife Savita for life and thereafter to my son Rohit absolutely. PPF and bank balances to my wife. Gold jewellery already in my wife's custody is her stridhan and is merely acknowledged. INR 10 lakh from SBI savings to my daughter Aditi.",
+			residue: "Savita Kulkarni, wife of the testator",
+			place: "Pune"
+		}
+	},
+	{
+		slug: "partnership-deed",
+		title: "Partnership deed",
+		blurb: "Deed for a partnership firm — shares, capital, management and dissolution.",
+		area: "corporate",
+		forum: "Instrument",
+		ragQuery: "partnership deed indian partnership act capital profit share dissolution bank account",
+		instructions: "Draft a partnership deed under the Indian Partnership Act, 1932. Parties, firm name, commencement, business, principal place, capital, profit-and-loss shares, management and bank operation, drawings, admission/retirement, dissolution, arbitration (optional), stamp. Keep it registrable with the Registrar of Firms.",
+		fields: [
+			{
+				key: "firmName",
+				label: "Firm name",
+				type: "text",
+				required: true
+			},
+			{
+				key: "business",
+				label: "Business",
+				type: "text",
+				required: true
+			},
+			{
+				key: "place",
+				label: "Principal place",
+				type: "text",
+				required: true
+			},
+			{
+				key: "partners",
+				label: "Partners (names and addresses)",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "capital",
+				label: "Capital contribution",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "shares",
+				label: "Profit / loss shares",
+				type: "text",
+				required: true
+			},
+			{
+				key: "management",
+				label: "Management & banking",
+				type: "textarea"
+			},
+			{
+				key: "term",
+				label: "Term",
+				type: "text",
+				placeholder: "At will / 5 years from …"
+			}
+		],
+		sample: {
+			firmName: "Mira & Sen Design Studio",
+			business: "Interior design and turnkey fit-outs",
+			place: "Bandra West, Mumbai",
+			partners: "1. Mira Kapoor, 12 Pali Hill, Mumbai.\n2. Aditya Sen, 44 Chapel Road, Bandra, Mumbai.",
+			capital: "Mira: INR 15,00,000 in cash. Aditya: INR 10,00,000 in cash plus tools valued at INR 2,00,000.",
+			shares: "Mira 60% : Aditya 40% of profits and losses",
+			management: "Either partner may operate the current account jointly for sums above INR 2 lakh; below that, either may sign. Mira is the managing partner for client contracts.",
+			term: "Five years from 01.09.2026 and thereafter at will"
+		}
+	},
+	{
+		slug: "store-terms-of-service",
+		title: "Website terms of service",
+		blurb: "Customer-facing T&Cs for an Indian online store — clickwrap, CPA, and governing law.",
+		area: "ecommerce",
+		forum: "Store policy",
+		ragQuery: "terms of service e-commerce rules 2020 unfair contract consumer protection clickwrap inventory marketplace grievance officer governing law India cannot oust consumer commission",
+		instructions: "Draft customer-facing website Terms of Service for an Indian online store, not a court pleading. Numbered clauses, plain English, Indian spelling. Cover: who the seller is (inventory vs marketplace), account and eligibility (18+), offer and acceptance of the online contract, price (inclusive of GST and other charges as displayed), orders and cancellation before dispatch, prohibited uses, IP, user content, limitation of liability that does NOT exclude CPA 2019 / product-liability / death or personal injury from negligence, no US-style 'as-is / all sales final' language, no ouster of Consumer Commissions, grievance officer, governing law India, courts at the store's city as non-exclusive concurrent with the consumer's statutory forum. Cross-refer Privacy, Refund and Shipping policies. Do not invent a PRAYER or vakalatnama. Flag in notes any missing GSTIN, CIN, or grievance-officer particulars.",
+		fields: [
+			{
+				key: "legalName",
+				label: "Legal name of the store",
+				type: "text",
+				required: true
+			},
+			{
+				key: "brandName",
+				label: "Brand / trading name",
+				type: "text",
+				required: true
+			},
+			{
+				key: "website",
+				label: "Website URL",
+				type: "text",
+				required: true,
+				placeholder: "https://www.example.in"
+			},
+			{
+				key: "registeredOffice",
+				label: "Registered office",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "cin",
+				label: "CIN / LLPIN (if any)",
+				type: "text"
+			},
+			{
+				key: "gstin",
+				label: "GSTIN",
+				type: "text"
+			},
+			{
+				key: "model",
+				label: "Business model",
+				type: "select",
+				required: true,
+				options: [
+					{
+						value: "inventory",
+						label: "Inventory (you sell your own goods)"
+					},
+					{
+						value: "marketplace",
+						label: "Marketplace (third-party sellers)"
+					},
+					{
+						value: "hybrid",
+						label: "Hybrid"
+					}
+				]
+			},
+			{
+				key: "goods",
+				label: "What you sell",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "territory",
+				label: "Where you sell",
+				type: "text",
+				required: true,
+				placeholder: "India only"
+			},
+			{
+				key: "grievanceOfficer",
+				label: "Grievance officer (name, designation, email, phone)",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "governingCity",
+				label: "Home courts (city)",
+				type: "text",
+				required: true,
+				placeholder: "New Delhi"
+			},
+			{
+				key: "extras",
+				label: "Special terms",
+				type: "textarea",
+				placeholder: "Gift cards, loyalty, user-generated reviews, prohibited items…"
+			}
+		],
+		sample: {
+			legalName: "Kala Loom (India) Pvt. Ltd.",
+			brandName: "Kala Loom",
+			website: "https://www.kalaloom.in",
+			registeredOffice: "Plot 12, Okhla Industrial Area, Phase II, New Delhi 110020",
+			cin: "U18101DL2021PTC380221",
+			gstin: "07AABCK1234D1Z5",
+			model: "inventory",
+			goods: "Handloom apparel, home textiles and limited-run craft objects, sold as a D2C inventory store (not a marketplace).",
+			territory: "India only. No international checkout.",
+			grievanceOfficer: "Meera Iyer, Grievance Officer · grievance@kalaloom.in · +91 11 4100 2210 · Plot 12, Okhla Phase II, New Delhi 110020. Acknowledges in 48 hours; disposes in 1 month.",
+			governingCity: "New Delhi",
+			extras: "Reviews must be of purchased goods. No counterfeit or resale of our marks. Gift cards valid 12 months, not redeemable for cash."
+		}
+	},
+	{
+		slug: "store-consent-policy",
+		title: "Privacy and consent policy",
+		blurb: "DPDP-aligned notice and consent for an Indian store — purpose, withdrawal, children.",
+		area: "ecommerce",
+		forum: "Store policy",
+		ragQuery: "DPDP 2023 consent notice data principal fiduciary withdrawal children personal data e-commerce privacy cookie tracking IT Act intermediary",
+		instructions: "Draft an Indian Privacy and Consent Policy under the Digital Personal Data Protection Act, 2023, for an online store. This is a customer-facing notice, not a GDPR clone and not a pleading. Use DPDP vocabulary: data principal, data fiduciary, consent that is free, specific, informed, unconditional and unambiguous, and as easy to withdraw as to give. Itemise personal data collected (account, orders, address, device, payments via a listed gateway — the store should not store full card data), each purpose, cookies/analytics, sharing with logistics/payment/cloud processors, cross-border if any, retention, security, children's data (no tracking or targeted ads at under-18s; parental consent), grievance contact, and the right to access, correction and erasure. Consent is not bundled as a default tick inside T&Cs. Do not claim 'legitimate interest' as if GDPR applied. Flag if a Consent Manager or SDF obligations may apply.",
+		fields: [
+			{
+				key: "legalName",
+				label: "Data fiduciary (legal name)",
+				type: "text",
+				required: true
+			},
+			{
+				key: "brandName",
+				label: "Brand name",
+				type: "text",
+				required: true
+			},
+			{
+				key: "website",
+				label: "Website",
+				type: "text",
+				required: true
+			},
+			{
+				key: "registeredOffice",
+				label: "Registered office",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "dataCollected",
+				label: "Personal data you collect",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "purposes",
+				label: "Purposes of processing",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "processors",
+				label: "Processors / sharing (payments, logistics, cloud, analytics)",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "crossBorder",
+				label: "Cross-border transfer?",
+				type: "select",
+				options: [{
+					value: "none",
+					label: "None — India only"
+				}, {
+					value: "yes",
+					label: "Yes — some processors sit abroad"
+				}]
+			},
+			{
+				key: "cookies",
+				label: "Cookies / analytics used",
+				type: "textarea"
+			},
+			{
+				key: "children",
+				label: "Do you knowingly sell to children?",
+				type: "select",
+				options: [{
+					value: "no",
+					label: "No — 18+ store"
+				}, {
+					value: "yes",
+					label: "Yes — need parental consent flow"
+				}]
+			},
+			{
+				key: "grievanceOfficer",
+				label: "Data / grievance contact",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "retention",
+				label: "Retention (orders, accounts, marketing)",
+				type: "textarea"
+			}
+		],
+		sample: {
+			legalName: "Kala Loom (India) Pvt. Ltd.",
+			brandName: "Kala Loom",
+			website: "https://www.kalaloom.in",
+			registeredOffice: "Plot 12, Okhla Industrial Area, Phase II, New Delhi 110020",
+			dataCollected: "Name, mobile, email, billing and shipping address, order history, GST invoice details, device/browser, IP, and truncated payment tokens from the gateway. We do not store PAN of cards.",
+			purposes: "Account, checkout, delivery, GST invoicing, warranty/returns, fraud prevention, service messages, and marketing only if a separate opt-in is given.",
+			processors: "Razorpay (payments), Delhivery and India Post (logistics), AWS Mumbai (hosting), Zoho (email). No sale of personal data.",
+			crossBorder: "none",
+			cookies: "Strictly necessary session cookies plus optional Google Analytics, loaded only after consent.",
+			children: "no",
+			grievanceOfficer: "Meera Iyer · privacy@kalaloom.in · +91 11 4100 2210. Response in 48 hours; disposal in 1 month.",
+			retention: "Orders and invoices: 8 years (tax). Account: while open and 3 years after. Marketing consent: until withdrawn."
+		}
+	},
+	{
+		slug: "store-refund-policy",
+		title: "Refund, return and cancellation policy",
+		blurb: "Returns, refunds and cancellations that can actually stand under the CPA and e-commerce rules.",
+		area: "ecommerce",
+		forum: "Store policy",
+		ragQuery: "refund return cancellation e-commerce rules 2020 consumer protection unfair contract defective goods replacement deficiency of service no all sales final",
+		instructions: "Draft an Indian Refund, Return and Cancellation Policy for an online store. Customer-facing, numbered clauses. You may set a window for change-of-mind returns, but you MUST preserve statutory remedies: refund/replacement for defective, damaged, expired, late, or not-as-described goods, and for services not provided with due care. Do not write 'all sales final', 'no refund under any circumstances', or a cancellation fee that the store does not similarly bear. Distinguish (a) cancellation before dispatch, (b) change-of-mind within a stated window if unused/unwashed/with tags, (c) defect/wrong-item, (d) non-returnable categories that are lawful (custom-stitched, perishable, intimate apparel once unsealed, digital codes once revealed) — and still allow return if they are defective. State how to raise a ticket, inspection on reverse pickup, timeline to credit the original payment method, and COD refunds by NEFT. Point to the grievance officer. Cross-refer Shipping. Not a pleading.",
+		fields: [
+			{
+				key: "legalName",
+				label: "Legal name",
+				type: "text",
+				required: true
+			},
+			{
+				key: "brandName",
+				label: "Brand name",
+				type: "text",
+				required: true
+			},
+			{
+				key: "website",
+				label: "Website",
+				type: "text",
+				required: true
+			},
+			{
+				key: "goods",
+				label: "What you sell",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "changeOfMindDays",
+				label: "Change-of-mind window (days)",
+				type: "text",
+				required: true,
+				placeholder: "7"
+			},
+			{
+				key: "nonReturnable",
+				label: "Non-returnable categories (change of mind only)",
+				type: "textarea"
+			},
+			{
+				key: "cancelBeforeDispatch",
+				label: "Cancellation before dispatch",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "refundTimeline",
+				label: "Refund timeline after we receive the return",
+				type: "text",
+				required: true,
+				placeholder: "7 business days to original method"
+			},
+			{
+				key: "whoPaysReturnShip",
+				label: "Who pays reverse pickup",
+				type: "select",
+				options: [
+					{
+						value: "store-defect",
+						label: "Store pays if defect/wrong item; customer pays for change of mind"
+					},
+					{
+						value: "store-all",
+						label: "Store pays reverse pickup in all accepted returns"
+					},
+					{
+						value: "customer-all",
+						label: "Customer always pays reverse shipping"
+					}
+				]
+			},
+			{
+				key: "grievanceOfficer",
+				label: "Grievance officer",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "extras",
+				label: "Other rules (sale items, gift cards, exchanges)",
+				type: "textarea"
+			}
+		],
+		sample: {
+			legalName: "Kala Loom (India) Pvt. Ltd.",
+			brandName: "Kala Loom",
+			website: "https://www.kalaloom.in",
+			goods: "Handloom apparel and home textiles. Made-to-measure garments on request.",
+			changeOfMindDays: "7",
+			nonReturnable: "Made-to-measure / custom-stitched pieces; innerwear once the hygiene seal is broken; gift cards once issued. Defective pieces in these categories remain returnable.",
+			cancelBeforeDispatch: "Cancel from the account or by email any time before the invoice and handover to the courier. Full refund, no fee. After dispatch, use the return window.",
+			refundTimeline: "7 business days of the reverse pickup being received at Okhla, to the original method; COD orders by NEFT to the bank details the customer emails.",
+			whoPaysReturnShip: "store-defect",
+			grievanceOfficer: "Meera Iyer · grievance@kalaloom.in · +91 11 4100 2210",
+			extras: "Sale-price goods follow the same defect rules. Exchange of size is free once within 7 days if unused. No restocking fee."
+		}
+	},
+	{
+		slug: "store-shipping-policy",
+		title: "Shipping and delivery policy",
+		blurb: "Dispatch, timelines, COD, title and risk — written so late delivery is not a hidden waiver.",
+		area: "ecommerce",
+		forum: "Store policy",
+		ragQuery: "shipping delivery e-commerce rules 2020 deficiency of service COD title risk sale of goods late delivery country of origin prepaid",
+		instructions: "Draft an Indian Shipping and Delivery Policy for an online store. Customer-facing, numbered clauses. Cover serviceable PIN codes, prepaid vs COD (and COD limits), dispatch SLA from order confirmation, typical delivery windows by zone, order tracking, failed-delivery reattempts, who bears risk in transit (prefer: store bears risk until delivery to the customer, which is the consumer-friendly position), title passing on full payment and delivery, GST invoice in the packet, delays for force majeure without extinguishing the right to cancel a late order, lost/damaged shipments, international (if any), and the grievance officer. Do not promise a date you then disclaim entirely — a displayed delivery estimate is part of the service. Not a pleading.",
+		fields: [
+			{
+				key: "legalName",
+				label: "Legal name",
+				type: "text",
+				required: true
+			},
+			{
+				key: "brandName",
+				label: "Brand name",
+				type: "text",
+				required: true
+			},
+			{
+				key: "website",
+				label: "Website",
+				type: "text",
+				required: true
+			},
+			{
+				key: "origin",
+				label: "Dispatch location(s)",
+				type: "text",
+				required: true,
+				placeholder: "Okhla, New Delhi"
+			},
+			{
+				key: "territory",
+				label: "Serviceable area",
+				type: "text",
+				required: true
+			},
+			{
+				key: "carriers",
+				label: "Carriers",
+				type: "text",
+				required: true
+			},
+			{
+				key: "dispatchSla",
+				label: "Dispatch SLA",
+				type: "text",
+				required: true,
+				placeholder: "Within 2 business days of confirmation"
+			},
+			{
+				key: "deliveryWindows",
+				label: "Delivery windows by zone",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "charges",
+				label: "Shipping charges / free-shipping threshold",
+				type: "textarea",
+				required: true
+			},
+			{
+				key: "cod",
+				label: "Cash on delivery",
+				type: "textarea"
+			},
+			{
+				key: "risk",
+				label: "Who bears transit risk",
+				type: "select",
+				options: [{
+					value: "store",
+					label: "Store until delivered to the customer"
+				}, {
+					value: "split",
+					label: "Carrier after handover — customer claims through us"
+				}]
+			},
+			{
+				key: "grievanceOfficer",
+				label: "Grievance officer",
+				type: "textarea",
+				required: true
+			}
+		],
+		sample: {
+			legalName: "Kala Loom (India) Pvt. Ltd.",
+			brandName: "Kala Loom",
+			website: "https://www.kalaloom.in",
+			origin: "Warehouse at Plot 12, Okhla Phase II, New Delhi 110020",
+			territory: "All serviceable PIN codes in India. We do not ship outside India.",
+			carriers: "Delhivery, India Post Speed Post, and a Delhi NCR own-fleet for select PIN codes",
+			dispatchSla: "In-stock: within 2 business days of payment confirmation. Made-to-measure: 12–18 business days, stated on the product page.",
+			deliveryWindows: "Metros and NCR: 3–5 days from dispatch. Tier-2: 5–8 days. Rest of India: 7–12 days. Remote/NE/island: 10–18 days as shown at checkout.",
+			charges: "Free standard shipping above INR 1,499. Below that, INR 79. Express (metros) INR 149. Checkout shows the final figure before pay.",
+			cod: "COD on orders up to INR 5,000, plus INR 40 collection fee. COD not available for made-to-measure.",
+			risk: "store",
+			grievanceOfficer: "Meera Iyer · grievance@kalaloom.in · +91 11 4100 2210"
+		}
+	}
+];
+function getTemplate(slug) {
+	return TEMPLATES.find((t) => t.slug === slug);
+}
+//#endregion
+export { TEMPLATES as n, getTemplate as r, PRACTICE_AREAS as t };

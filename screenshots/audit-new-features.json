@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8080/audit",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "NyayaDraft",
+      "hasCanvas": false,
+      "bodyTextLen": 917,
+      "bodyTextHash": "afe0b0f0789b876864ebd6d39cd552ceb965fea2cf91533ba32499e47d5921e7",
+      "bodyTextPrefix": "NyayaDraft INDIAN LEGAL DRAFTING Draft Library Ask the law Audit",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/audit-new-features.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "NyayaDraft",
+      "hasCanvas": false,
+      "bodyTextLen": 895,
+      "bodyTextHash": "acbc1d66c391a581641c380c13ef366c49ed72bfd33b8fabcbb30eb7d08a017c",
+      "bodyTextPrefix": "NyayaDraft Draft Library Ask the law Audit store History LIVE ST",
+      "horizontalOverflow": false,
+      "consoleErrors": [
+        "A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:\n\n- A server/client branch `if (typeof window !== 'undefined')`.\n- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.\n- Date formatting in a user's locale which doesn't match the server.\n- External changing data without sending a snapshot of it along with the HTML.\n- Invalid HTML tag nesting.\n\nIt can also happen if the client has a browser extension installed which messes with the HTML before React loaded.\n\n%s%s https://react.dev/link/hydration-mismatch \n\n  ...\n    <SafeFragment fallback={null}>\n      <CatchBoundary getResetKey={function getResetKey} errorComponent={function AppErrorComponent} ...>\n        <SafeFragment fallback={function fallback}>\n          <MatchInnerImpl match={{id:\"/audit...\", ...}}>\n            <Lazy>\n              <AuditPage>\n                <AppShell>\n                  <div className=\"min-h-dvh ...\">\n                    <header>\n                    <main>\n                      <section className=\"border-b b...\">\n                        <div className=\"mx-auto ma...\">\n                          <p>\n                          <h1>\n                          <p>\n                          <form className=\"mt-6 flex ...\" onSubmit={function onSubmit}>\n                            <div className=\"relative m...\">\n                              <Globe>\n                              <Input value=\"\" onChange={function onChange} placeholder=\"dakshis.com\" className=\"pl-10\" ...>\n                                <input\n                                  type={undefined}\n                                  className=\"flex h-11 w-full rounded-[var(--radius-sm)] border border-border bg-paper...\"\n                                  value=\"\"\n                                  onChange={function onChange}\n                                  placeholder=\"dakshis.com\"\n                                  autoCapitalize=\"none\"\n                                  autoCorrect=\"off\"\n                                  spellCheck={false}\n-                                 style={{caret-color:\"transparent\"}}\n                                >\n                            ...\n                          ...\n                      ...\n                    ...\n"
+      ],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/audit-new-features-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/audit-new-features.json"
+}

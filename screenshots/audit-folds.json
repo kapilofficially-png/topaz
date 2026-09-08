@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/audit",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "NyayaDraft",
+      "hasCanvas": false,
+      "bodyTextLen": 898,
+      "bodyTextHash": "435752c30cd3aedce9bef51c8bee797fc38c5d84708ccdc011dd82d41ebf89b3",
+      "bodyTextPrefix": "NyayaDraft INDIAN LEGAL DRAFTING Draft Library Ask the law Audit",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/audit-folds.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "NyayaDraft",
+      "hasCanvas": false,
+      "bodyTextLen": 876,
+      "bodyTextHash": "7fb64fed284a300e4b5eee99aa684ca6f72fc299f4394615fe881f0ba18a24a4",
+      "bodyTextPrefix": "NyayaDraft Draft Library Ask the law Audit store Cold email Hist",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/audit-folds-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/audit-folds.json"
+}

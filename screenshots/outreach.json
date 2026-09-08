@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/outreach",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "NyayaDraft",
+      "hasCanvas": false,
+      "bodyTextLen": 1419,
+      "bodyTextHash": "a5f6087b2920575e3e754c51de730072af760ce699f3dbeea78b07df97b25cfc",
+      "bodyTextPrefix": "NyayaDraft INDIAN LEGAL DRAFTING Draft Library Ask the law Audit",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/outreach.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "NyayaDraft",
+      "hasCanvas": false,
+      "bodyTextLen": 1397,
+      "bodyTextHash": "e2cd908a76a6c3ad00bff4288e469a7e4c5b38e8f68a590078e058aafe6e97e6",
+      "bodyTextPrefix": "NyayaDraft Draft Library Ask the law Audit store Cold email Hist",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/outreach-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/outreach.json"
+}

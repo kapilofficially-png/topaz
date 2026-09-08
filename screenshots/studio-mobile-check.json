@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/draft/legal-notice-demand",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "NyayaDraft",
+      "hasCanvas": false,
+      "bodyTextLen": 1210,
+      "bodyTextHash": "7524f02c66f5fbc3d806855236b8763d688d4cb342adc53c768a2278787741f9",
+      "bodyTextPrefix": "NyayaDraft INDIAN LEGAL DRAFTING Draft Library Ask the law Histo",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/studio-mobile-check.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "NyayaDraft",
+      "hasCanvas": false,
+      "bodyTextLen": 1188,
+      "bodyTextHash": "89192f19cb0fc925629ec0944af37062dd19054a1922bdd2eeda9ae7699b6037",
+      "bodyTextPrefix": "NyayaDraft Draft Library Ask the law History All instruments ADV",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/studio-mobile-check-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/studio-mobile-check.json"
+}

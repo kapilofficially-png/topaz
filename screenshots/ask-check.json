@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/ask",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "NyayaDraft",
+      "hasCanvas": false,
+      "bodyTextLen": 971,
+      "bodyTextHash": "0fd097c7889de417229f40037ef0c43cfa134a01e8eacfd9dda411eb663c3b23",
+      "bodyTextPrefix": "NyayaDraft INDIAN LEGAL DRAFTING Draft Library Ask the law Histo",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/ask-check.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "NyayaDraft",
+      "hasCanvas": false,
+      "bodyTextLen": 949,
+      "bodyTextHash": "4c98b817437dbefd357b6c606830cb1f2875a1d691ebbf325ab19ab5fc00ab93",
+      "bodyTextPrefix": "NyayaDraft Draft Library Ask the law History GROUNDED Q&A Ask th",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/ask-check-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/ask-check.json"
+}

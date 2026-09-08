@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/audit",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "NyayaDraft",
+      "hasCanvas": false,
+      "bodyTextLen": 815,
+      "bodyTextHash": "e642f8eb25401a43eedfcd0a7d940dc492ad7c7bb8e77a74c74cece14c4ccc29",
+      "bodyTextPrefix": "NyayaDraftIndian legal drafting DraftLibraryAsk the lawAudit sto",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/audit-page.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "NyayaDraft",
+      "hasCanvas": false,
+      "bodyTextLen": 799,
+      "bodyTextHash": "9dc9e58c2b83a8d2e521c71e6dd5c99be39e6c42c83b19fb30f6a32703784e34",
+      "bodyTextPrefix": "NyayaDraft Draft Library Ask the law Audit store History LIVE ST",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/audit-page-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/audit-page.json"
+}
